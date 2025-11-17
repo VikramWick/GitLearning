@@ -1,0 +1,96 @@
+GIT
+
+GIT Stands for "Global Information Tracker".
+
+GIT is a Distributed Version Control.
+
+It is mainly used for version control and Continuous Integration.
+
+Structure
+
+1. Central Repository, called GITHUB - where continuous integration is done
+
+2. Local Repository which is in the local machine used for unit development
+
+3. Folder Structure which is in the local system where we actually develop the code
+
+4. The difference between folder structure and Local repository(git) is -- Git is another sub folder by the name ".GIT",
+ 
+	Normally, we should not interact with the .git folder directly but we can interact with the GIT COMMANDS.
+
+NOTE :  1. whenever we execute the git command, Folder should have .git sub folder
+
+	2. Nested .git folder is not recommended
+
+5. Whenever the code is developed, the code will be in the local folder. The local folder should be under .git folder
+
+6. Once the code is developed inside the folder structure, the code should be transferred to the local repository (.git) by using git COMMANDS
+
+7. From Local repository, The code can be integrated to the Central repository (Git Hub) using git Commands only
+
+8. Taking the code from folders to the local repository is called "COMMIT".
+
+	From local repo to central repo is called "PUSHING".
+
+Q: Once pushing is done the code will be integrated 
+
+A: False. 
+
+NOTE: If many people are developing the code, Pushing doesn't mean integration but "MERGING" the code will be integrated. (we shall merge the branches)
+
+i.e. When we create a project, we should create branches for the project.
+
+TASK:::  Design a branching strategy for your Group ----- https://www.geeksforgeeks.org/git/branching-strategies-in-git/
+
+9. Main Branch/ Master Branch -- is specifically kept for production level code
+
+10. Dev Branch -- The code that is used for the Development (Sub Branch of Main Branch)
+
+11. From Dev Branch, Every Team member can create a Feature Branch i.e. On which feature the developer is working on (Sub Branches of Dev Branch)
+
+12. The Developed code will go to the feature branch..... Integrated code will go into the Dev Branch using MERGE (PULL REQUEST -- PR)
+
+DIFFERENCE between PULL, REBASE, ....??
+
+
+NOTE: Once the code is merged, we should delete the feature branch and also delete the feature clone folder in the local system, so that we don't have any merge conflicts.
+
+13. From Folder to Local repository, we will use the following commands-----
+
+	1. Git add (Staging command -- The file that went under changing will be MARKED for commit)
+	
+	2. Commit (The stage files will be copied to the local repository)
+
+	3.  Clone(To create a local repository) or Git Init + Git remote
+
+NOTE: Once you clone, before we edit the code make sure you are in the respective branch. By Default once we clone the control will be in the main branch  ---- Use:- git switch (recommend) / git checkout to switch into your feature 
+
+branch. During pushing also, we should push from the respective branch
+
+
+
+
+				----STEPS TO BE FOLLOWED-------
+
+1. Open GitHub
+
+2. Create a new Repository/project
+
+3. Give a proper name and description
+
+4. Add a readme.md to the repository because blank repository cant be cloned
+
+5. Add Team members (settings > collaborations > click on Add People). Once the person accepts the request for collaboration, He/she will be able to see the repo
+
+6. Go to the repository and copy the repository URL
+
+7. Go to your respective folder in the local machine and open git bash
+
+8. once git bash cli is opened, type " git clone URL"
+
+9. set the global settings only once
+
+	git config -global user.name User Name
+	git config -global user. email User Email (where the repository is created)
+
+Q: If the branch is not switched and the code is edited, how should we revert it?
