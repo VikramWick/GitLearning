@@ -86,11 +86,11 @@ branch. During pushing also, we should push from the respective branch
 
 7. Go to your respective folder in the local machine and open git bash
 
-8. once git bash cli is opened, type " git clone url"
+8. once git bash cli is opened, type " git clone URL"
 
 9. set the global settings only once
 
 	git config -global user.name User Name
-	git config -global user.email User Email (where the repository is created)
+	git config -global user. email User Email (where the repository is created)
 
 Q: If the branch is not switched and the code is edited, how should we revert it?
